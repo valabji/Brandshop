@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
 	shippingAddressText: {
 		backgroundColor: "transparent",
 		color: "rgb(251, 251, 251)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
 	},
 	homeAddressText: {
 		color: "black",
-		fontFamily: "Poppins-Bold",
+		fontFamily: "Poppins_700Bold",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
 	streetAddressTwoText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -340,7 +340,7 @@ const styles = StyleSheet.create({
 	},
 	workAddressText: {
 		color: "black",
-		fontFamily: "Poppins-Bold",
+		fontFamily: "Poppins_700Bold",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
 	streetAddressText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -388,7 +388,7 @@ const styles = StyleSheet.create({
 	},
 	nextText: {
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
 	homeText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -424,7 +424,7 @@ const styles = StyleSheet.create({
 	shopsText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -449,7 +449,7 @@ const styles = StyleSheet.create({
 	myCartText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -463,7 +463,7 @@ const styles = StyleSheet.create({
 	},
 	meText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -474,7 +474,7 @@ const styles = StyleSheet.create({
 	dealsText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",

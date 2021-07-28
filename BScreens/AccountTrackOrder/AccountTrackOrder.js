@@ -537,7 +537,7 @@ const styles = StyleSheet.create({
 	trackOrderText: {
 		backgroundColor: "transparent",
 		color: "rgb(251, 251, 251)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -583,7 +583,7 @@ const styles = StyleSheet.create({
 	},
 	sept232020TwoText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -617,7 +617,7 @@ const styles = StyleSheet.create({
 	od424923192NThreeText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -626,7 +626,7 @@ const styles = StyleSheet.create({
 	kwdThreeText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -643,7 +643,7 @@ const styles = StyleSheet.create({
 	},
 	inTransitText: {
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -711,7 +711,7 @@ const styles = StyleSheet.create({
 	deliveredTwoText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -734,7 +734,7 @@ const styles = StyleSheet.create({
 	},
 	od424923192NText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -743,7 +743,7 @@ const styles = StyleSheet.create({
 	},
 	kwdText: {
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -827,7 +827,7 @@ const styles = StyleSheet.create({
 	od424923192NTwoText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -836,7 +836,7 @@ const styles = StyleSheet.create({
 	kwdTwoText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -862,7 +862,7 @@ const styles = StyleSheet.create({
 	deliveredThreeText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -884,7 +884,7 @@ const styles = StyleSheet.create({
 	deliveredFourText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1029,7 +1029,7 @@ const styles = StyleSheet.create({
 	homeText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1044,7 +1044,7 @@ const styles = StyleSheet.create({
 	},
 	shopsText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1069,7 +1069,7 @@ const styles = StyleSheet.create({
 	},
 	myCartText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1085,7 +1085,7 @@ const styles = StyleSheet.create({
 	meText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1095,7 +1095,7 @@ const styles = StyleSheet.create({
 	dealsText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",

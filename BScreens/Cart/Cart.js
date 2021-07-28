@@ -611,7 +611,7 @@ const styles = StyleSheet.create({
 	},
 	dealsText: {
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -638,7 +638,7 @@ const styles = StyleSheet.create({
 	},
 	myCartTwoText: {
 		color: "rgb(251, 251, 251)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -669,7 +669,7 @@ const styles = StyleSheet.create({
 	},
 	electricKettleText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -679,7 +679,7 @@ const styles = StyleSheet.create({
 	},
 	kwdThreeText: {
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -732,7 +732,7 @@ const styles = StyleSheet.create({
 	tagHeuerWristwatchText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -742,7 +742,7 @@ const styles = StyleSheet.create({
 	kwdFiveText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -805,7 +805,7 @@ const styles = StyleSheet.create({
 	kwdFourText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -858,7 +858,7 @@ const styles = StyleSheet.create({
 	bangOlufsenCaseText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -867,7 +867,7 @@ const styles = StyleSheet.create({
 	},
 	kwdTwoText: {
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -920,7 +920,7 @@ const styles = StyleSheet.create({
 	smartHomeSpeakerText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -930,7 +930,7 @@ const styles = StyleSheet.create({
 	kwdText: {
 		backgroundColor: "transparent",
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -985,7 +985,7 @@ const styles = StyleSheet.create({
 	},
 	kwdSixText: {
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1004,7 +1004,7 @@ const styles = StyleSheet.create({
 	},
 	checkoutText: {
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1013,7 +1013,7 @@ const styles = StyleSheet.create({
 	},
 	totalText: {
 		color: "rgb(146, 146, 146)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1040,7 +1040,7 @@ const styles = StyleSheet.create({
 	},
 	homeText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1058,7 +1058,7 @@ const styles = StyleSheet.create({
 	shopsText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1083,7 +1083,7 @@ const styles = StyleSheet.create({
 	myCartText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1099,7 +1099,7 @@ const styles = StyleSheet.create({
 	meText: {
 		backgroundColor: "transparent",
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",

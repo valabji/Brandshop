@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Platform, StatusBar, StyleSheet, View, Text, Image, TouchableOpacity, Share, I18nManager } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View, Text, Image, TouchableOpacity, Share, I18nManager, LogBox } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { Feather, Ionicons } from '@expo/vector-icons';
@@ -7,6 +7,7 @@ import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import BottomTabNavigator from './navigation/BottomTabNavigator';
+import NestedNavigations from './navigation/NestedNavigations';
 import LoginScreen from './screens/LoginScreen'
 import RegScreen from './screens/Register'
 import TabBarIcon from './components/TabBarIcon';
@@ -16,49 +17,6 @@ import Colors from './constants/Colors';
 import Constants from 'expo-constants';
 import LoadingScreen from './screens/Loading';
 
-import Account from "./BScreens/Account/Account"
-let TScreen = Account
-import AccountShipping from "./BScreens/AccountShipping/AccountShipping"
-// TScreen = AccountShipping
-import AccountTrackOrder from "./BScreens/AccountTrackOrder/AccountTrackOrder"
-// TScreen = AccountTrackOrder
-import AccountTrackOrderViewOrderItenirary from "./BScreens/AccountTrackOrderViewOrderItenirary/AccountTrackOrderViewOrderItenirary"
-// TScreen = AccountTrackOrderViewOrderItenirary
-import AccountWishlist from "./BScreens/AccountWishlist/AccountWishlist"
-// TScreen = AccountWishlist
-import Cart from "./BScreens/Cart/Cart"
-// TScreen = Cart
-import CartScroll from "./BScreens/CartScroll/CartScroll"
-// TScreen = CartScroll
-import CartSwipeDelete from "./BScreens/CartSwipeDelete/CartSwipeDelete"
-// TScreen = CartSwipeDelete
-import CartSwipeWishlist from "./BScreens/CartSwipeWishlist/CartSwipeWishlist"
-// TScreen = CartSwipeWishlist
-import CheckoutAddress from "./BScreens/CheckoutAddress/CheckoutAddress"
-// TScreen = CheckoutAddress
-import CheckoutDelivery from "./BScreens/CheckoutDelivery/CheckoutDelivery"
-// TScreen = CheckoutDelivery
-import CheckoutOrderSummary from "./BScreens/CheckoutOrderSummary/CheckoutOrderSummary"
-// TScreen = CheckoutOrderSummary
-import CheckoutPaymentsSaveCards from "./BScreens/CheckoutPaymentsSaveCards/CheckoutPaymentsSaveCards"
-// TScreen = CheckoutPaymentsSaveCards
-import Home from "./BScreens/Home/Home"
-// TScreen = Home
-import Item from "./BScreens/Item/Item"
-// TScreen = Item
-import LOGIN from "./BScreens/LOGIN/LOGIN"
-// TScreen = LOGIN
-import Menu from "./BScreens/Menu/Menu"
-// TScreen = Menu
-import SIGNUP from "./BScreens/SIGNUP/SIGNUP"
-// TScreen = SIGNUP
-import Shop from "./BScreens/Shop/Shop"
-// TScreen = Shop
-import Shops from "./BScreens/Shops/Shops"
-// TScreen = Shops
-import Splash from "./BScreens/Splash/Splash"
-// TScreen = Splash
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   useFonts,
@@ -67,6 +25,7 @@ import {
   Tajawal_900Black,
 } from '@expo-google-fonts/tajawal';
 import { Cairo_400Regular, Cairo_700Bold, Cairo_900Black } from '@expo-google-fonts/cairo'
+import { Poppins_200ExtraLight, Poppins_300Light, Poppins_500Medium, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins'
 import { Montserrat_400Regular, Montserrat_700Bold, Montserrat_900Black } from '@expo-google-fonts/montserrat';
 import * as Localization from 'expo-localization';
 import i18n from 'i18n-js';
@@ -82,6 +41,9 @@ const changeReducer = createReducer({ "obj": { "x": "y", "ActiveS": true, "lang"
   },
 })
 export const mystore = configureStore({ reducer: changeReducer })
+
+LogBox.ignoreAllLogs()
+
 /*
 mystore.dispatch({ type: 'change', "obj": { "lang": "ar" } })
 
@@ -144,6 +106,11 @@ export default function App(props) {
     Montserrat_400Regular,
     Montserrat_700Bold,
     Montserrat_900Black,
+    Poppins_200ExtraLight,
+    Poppins_300Light,
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold
   });
   React.useEffect(() => {
     async function loadResourcesAndDataAsync() {
@@ -170,227 +137,17 @@ export default function App(props) {
     return (
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator initialRouteName="BotNav">
-            <Stack.Screen
-              name="Login"
-              // component={LoginScreen}
-              component={TScreen}
-              options={{
-                title: 'Login',
-                headerShown: false,
-                tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-log-in" />,
-              }}
-            />
-            <Stack.Screen
-              name="Register"
-              component={RegScreen}
-              options={{
-                title: 'Register',
-                headerShown: false,
-                tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-person-add" />,
-              }}
-            />
-            {/* <Stack.Screen name="Root" component={BNav} options={{ title: "ReKit / Login", headerShown: false, headerStyle: { backgroundColor: "#ddd" } }} /> */}
-            <Stack.Screen name="BotNav" component={DNav} options={{ title: "Main Screen", headerShown: false, headerStyle: { backgroundColor: "#ddd" } }} />
-          </Stack.Navigator>
+        <NavigationContainer
+          ref={containerRef}
+          initialState={initialNavigationState}
+        >
+          <NestedNavigations />
         </NavigationContainer>
       </View>
     );
 
   }
 }
-const Drawer = createDrawerNavigator();
-function DNav() {
-  return (
-    <Drawer.Navigator
-      drawerType="slide"
-      drawerPosition="right"
-      drawerContent={({ navigation }) => <View
-        style={{ width: "100%", height: "100%", backgroundColor: Colors.BGreen }}>
-        <View style={{ flexDirection: "row", justifyContent: "center", marginTop: 20 }}>
-          <Image
-            source={require("./assets/images/icon.png")}
-            style={{ width: 128, height: 128 }}
-          />
-        </View>
-        <Text style={{ textAlign: 'center', fontFamily: "Cairo_400Regular", fontWeight: "500", color: Colors.BYellow, fontSize: 18 }}>{"تطبيق ذِكْر"}</Text>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Screen3")
-          }}
-          style={{
-            // width: "100%",
-            height: 64,
-            marginLeft: 5,
-            marginRight: 5,
-            marginTop: 30,
-            backgroundColor: Colors.DGreen,
-            flexDirection: "row-reverse",
-          }}>
-          <Image
-            source={require("./assets/images/icon.png")}
-            style={{
-              width: 64, height: 64
-            }}
-          />
-          <Text style={{
-            color: Colors.BYellow,
-            fontSize: 22,
-            marginTop: 7,
-            fontFamily: i18n.t('regular'),
-          }}>{i18n.t('hello')}</Text>
-          <View style={{ flex: 1 }} />
-          <Feather name="target" size={24} color={Colors.BYellow} style={{ marginTop: 17, marginLeft: 20 }} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Fav")
-          }}
-          style={{
-            // width: "100%",
-            height: 64,
-            marginLeft: 5,
-            marginRight: 5,
-            marginTop: 5,
-            backgroundColor: Colors.DGreen,
-            flexDirection: "row-reverse",
-          }}>
-          <Image
-            source={require("./assets/images/icon.png")}
-            style={{
-              width: 64, height: 64
-            }}
-          />
-          <Text style={{
-            color: Colors.BYellow,
-            fontSize: 22,
-            marginTop: 7,
-            fontFamily: "Cairo_400Regular",
-          }}>{"الاذكار المفضلة"}</Text>
-          <View style={{ flex: 1 }} />
-          <Feather name="heart" size={24} color={Colors.BYellow} style={{ marginTop: 17, marginLeft: 20 }} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Home")
-          }}
-          style={{
-            // width: "100%",
-            height: 64,
-            marginLeft: 5,
-            marginRight: 5,
-            marginTop: 5,
-            backgroundColor: Colors.DGreen,
-            flexDirection: "row-reverse",
-          }}>
-          <Image
-            source={require("./assets/images/icon.png")}
-            style={{
-              width: 64, height: 64
-            }}
-          />
-          <Text style={{
-            color: Colors.BYellow,
-            fontSize: 22,
-            marginTop: 7,
-            fontFamily: "Cairo_400Regular",
-          }}>{"كل الاذكار"}</Text>
-          <View style={{ flex: 1 }} />
-          <Feather name="list" size={24} color={Colors.BYellow} style={{ marginTop: 17, marginLeft: 20 }} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            Share.share({
-              message:
-                'حمل تطبيق الاذكار وانشره لغيرك لتعم الفائدة وتنال الثواب\nhttps://play.google.com/store/apps/details?id=com.valabji.khamsat.zikr',
-            });
-          }}
-          style={{
-            // width: "100%",
-            height: 64,
-            marginLeft: 5,
-            marginRight: 5,
-            marginTop: 5,
-            backgroundColor: Colors.DGreen,
-            flexDirection: "row-reverse",
-          }}>
-          <Image
-            source={require("./assets/images/icon.png")}
-            style={{
-              width: 64, height: 64
-            }}
-          />
-          <Text style={{
-            color: Colors.BYellow,
-            fontSize: 22,
-            marginTop: 7,
-            fontFamily: "Cairo_400Regular",
-          }}>{"مشاركة التطبيق"}</Text>
-          <View style={{ flex: 1 }} />
-          <Feather name="share-2" size={24} color={Colors.BYellow} style={{ marginTop: 17, marginLeft: 20 }} />
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={() => {
-            navigation.dispatch(StackActions.replace('Login'))
-          }}
-          style={{
-            // width: "100%",
-            height: 64,
-            marginLeft: 5,
-            marginRight: 5,
-            marginTop: 5,
-            backgroundColor: Colors.DGreen,
-            flexDirection: "row-reverse",
-          }}>
-          <Image
-            source={require("./assets/images/icon.png")}
-            style={{
-              width: 64, height: 64
-            }}
-          />
-          <Text style={{
-            color: Colors.BYellow,
-            fontSize: 22,
-            marginTop: 7,
-            fontFamily: "Cairo_400Regular",
-          }}>{"خروج"}</Text>
-          <View style={{ flex: 1 }} />
-          <Feather name="share-2" size={24} color={Colors.BYellow} style={{ marginTop: 17, marginLeft: 20 }} />
-        </TouchableOpacity>
-      </View>}
-      initialRouteName="Home">
-      <Drawer.Screen name="Home" component={BottomTabNavigator} />
-      <Drawer.Screen name="Screen3" component={Screen3} />
-    </Drawer.Navigator>
-  );
-}
-
-const BottomNav = createBottomTabNavigator();
-function BNav() {
-  return (
-    <BottomNav.Navigator initialRouteName="Login">
-      <BottomNav.Screen
-        name="Login"
-        component={LoginScreen}
-        options={{
-          title: 'Login',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-log-in" />,
-        }}
-      />
-      <BottomNav.Screen
-        name="Register"
-        component={RegScreen}
-        options={{
-          title: 'Register',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-person-add" />,
-        }}
-      />
-    </BottomNav.Navigator>
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

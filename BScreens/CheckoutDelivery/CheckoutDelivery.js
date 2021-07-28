@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
 	},
 	checkoutText: {
 		color: "rgb(251, 251, 251)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -346,7 +346,7 @@ const styles = StyleSheet.create({
 	},
 	standardDeliveryText: {
 		color: "black",
-		fontFamily: "Poppins-Bold",
+		fontFamily: "Poppins_700Bold",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -357,7 +357,7 @@ const styles = StyleSheet.create({
 	orderWillBeDeliveText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -379,7 +379,7 @@ const styles = StyleSheet.create({
 	},
 	nextDayDeliveryText: {
 		color: "black",
-		fontFamily: "Poppins-Bold",
+		fontFamily: "Poppins_700Bold",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -389,7 +389,7 @@ const styles = StyleSheet.create({
 	placeYourOrderBefText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -428,7 +428,7 @@ const styles = StyleSheet.create({
 	nextText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",

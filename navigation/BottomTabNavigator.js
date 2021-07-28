@@ -1,8 +1,13 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import Screen2 from '../screens/Screen2';
+import Shops from '../BScreens/Shops/Shops';
+import Shop from '../BScreens/Shop/Shop';
+import Item from '../BScreens/Item/Item';
 import Screen3 from '../screens/Screen3';
 import Colors from "../constants/Colors";
 import Account from "../BScreens/Account/Account"
@@ -16,6 +21,18 @@ const INITIAL_ROUTE_NAME = 'Home';
 
 export default function BottomTabNavigator({ navigation, route }) {
   navigation.setOptions({ headerTitle: getHeaderTitle(route) });
+
+  const Stack = createStackNavigator();
+
+  function Shoppz() {
+    return (
+      <Stack.Navigator >
+        <Stack.Screen name="shops" component={Shops} options={{ title: "", headerShown: false, headerStyle: { backgroundColor: "#ddd" } }} />
+        <Stack.Screen name="shop" component={Shop} options={{ title: "", headerShown: false, headerStyle: { backgroundColor: "#ddd" } }} />
+        {/* <Stack.Screen name="item" component={Item} options={{ title: "", headerShown: false, headerStyle: { backgroundColor: "#ddd" } }} /> */}
+      </Stack.Navigator>
+    )
+  }
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}
@@ -57,8 +74,8 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Sc2"
-        component={Screen2}
+        name="shops_cat"
+        component={Shoppz}
         options={{
           tabBarLabel: ({ focused }) => { return <View /> },
           tabBarIcon: ({ focused }) => {
@@ -80,8 +97,8 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Sc3"
-        component={Screen3}
+        name="Sc2"
+        component={Screen2}
         options={{
           tabBarLabel: ({ focused }) => { return <View /> },
           tabBarIcon: ({ focused }) => {

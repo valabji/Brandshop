@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
 	usernameText: {
 		backgroundColor: "transparent",
 		color: "rgb(49, 49, 49)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
 	},
 	passwordText: {
 		color: "rgb(49, 49, 49)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
 	},
 	loginTwoText: {
 		color: "white",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
 	},
 	forgotPasswordText: {
 		color: "rgb(70, 70, 70)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -303,7 +303,7 @@ const styles = StyleSheet.create({
 	},
 	donTHaveAnAccounText: {
 		color: "rgb(70, 70, 70)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
 	},
 	signUpText: {
 		color: "rgb(70, 70, 70)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -333,7 +333,7 @@ const styles = StyleSheet.create({
 	},
 	signUpWithSocialText: {
 		color: "rgb(70, 70, 70)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -358,7 +358,7 @@ const styles = StyleSheet.create({
 	},
 	orText: {
 		color: "rgb(70, 70, 70)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 14,
 		fontStyle: "normal",
 		fontWeight: "normal",

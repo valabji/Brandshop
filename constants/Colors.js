@@ -21,4 +21,5 @@ export default {
   BLACK: '#000',
   BLUE: '#5ff',
   PURPLE: '#f5f',
+  SOrange:'rgb(234, 169, 73)',
 };

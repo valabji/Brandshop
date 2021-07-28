@@ -32,6 +32,7 @@ export default function Main({ navigation }) {
   const handleLogin = useCallback(async () => {
     setLoading(true);
     if ("1234".match(password)) {
+      global.logedin = true
       navigation.dispatch(StackActions.replace('BotNav'))
     } else {
       alert("Wrong password for user " + email)

@@ -9,8 +9,8 @@
 import { Feather, Ionicons } from "@expo/vector-icons"
 import React from "react"
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
+import { Ic_iconeditprofile, Ic_iconexit, Ic_iconhistory, Ic_iconlocation, Ic_iconorder, Ic_iconpayment, Ic_iconwishlistprofile } from "../../components/SVG"
 import Icons from "../../screens/Icons"
-
 
 export default class Account extends React.Component {
 
@@ -33,7 +33,9 @@ export default class Account extends React.Component {
 	}
 
 	render() {
-
+		if (!global.logedin) {
+			this.props.navigation.navigate('Login')
+		}
 		return <View
 			style={styles.viewView}>
 			<View style={{ backgroundColor: "black", width: "100%", height: 72, justifyContent: "center" }}>
@@ -50,7 +52,7 @@ export default class Account extends React.Component {
 			</View>
 
 			<ScrollView>
-				<View style={{ backgroundColor: "white",padding:20 }} >
+				<View style={{ backgroundColor: "white", padding: 20 }} >
 					<View
 						pointerEvents="box-none"
 						style={{
@@ -84,51 +86,7 @@ export default class Account extends React.Component {
 						style={styles.editProfileView}>
 						<View
 							style={styles.iconEditProfileView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-698.png")}
-									style={styles.path696Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<View
-									style={styles.group188View}>
-									<View
-										pointerEvents="box-none"
-										style={{
-											position: "absolute",
-											left: 0,
-											right: 0,
-											top: 0,
-											bottom: 0,
-											justifyContent: "center",
-										}}>
-										<Image
-											source={require("./../../assets/images/group-186.png")}
-											style={styles.group186Image} />
-									</View>
-									<Image
-										source={require("./../../assets/images/group-187.png")}
-										style={styles.group187Image} />
-								</View>
-							</View>
+							<Ic_iconeditprofile />
 						</View>
 						<Text
 							style={styles.editProfileText}>Edit Profile</Text>
@@ -136,828 +94,95 @@ export default class Account extends React.Component {
 							style={{
 								flex: 1,
 							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightSixImage} />
-					</View>
-					<View
-						style={styles.shippingAddressView}>
-						<View
-							style={styles.iconLocationView}>
-							<Image
-								source={require("./../../assets/images/group-185.png")}
-								style={styles.group185Image} />
-						</View>
-						<Text
-							style={styles.shippingAddressText}>Shipping Address</Text>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightFiveImage} />
-					</View>
-					<View
-						style={styles.wishlistView}>
-						<View
-							style={styles.iconWishlistView}>
-							<Image
-								source={require("./../../assets/images/group-189.png")}
-								style={styles.group189Image} />
-						</View>
-						<Text
-							style={styles.wishlistText}>Wishlist</Text>
-						<View
-							style={styles.iconNewView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-729.png")}
-									style={styles.path729Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Text
-									style={styles.newText}>New</Text>
-							</View>
-						</View>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightFourImage} />
-					</View>
-
-					<View
-						style={styles.orderHistoryView}>
-						<View
-							style={styles.iconHistoryView}>
-							<View
-								style={styles.group194View}>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<Image
-										source={require("./../../assets/images/group-190.png")}
-										style={styles.group190Image} />
-								</View>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<View
-										style={styles.group193View}>
-										<View
-											pointerEvents="box-none"
-											style={{
-												position: "absolute",
-												left: 0,
-												right: 0,
-												top: 0,
-												bottom: 0,
-												justifyContent: "center",
-											}}>
-											<Image
-												source={require("./../../assets/images/group-191.png")}
-												style={styles.group191Image} />
-										</View>
-										<View
-											pointerEvents="box-none"
-											style={{
-												position: "absolute",
-												left: 0,
-												right: 0,
-												top: 0,
-												bottom: 0,
-												justifyContent: "center",
-											}}>
-											<Image
-												source={require("./../../assets/images/group-192.png")}
-												style={styles.group192Image} />
-										</View>
-									</View>
-								</View>
-							</View>
-						</View>
-						<Text
-							style={styles.orderHistoryText}>Order History</Text>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightThreeImage} />
-					</View>
-					<View
-						style={styles.trackOrderView}>
-						<View
-							style={styles.iconOrderView}>
-							<View
-								style={styles.group196View}>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<Image
-										source={require("./../../assets/images/group-195.png")}
-										style={styles.group195Image} />
-								</View>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<Image
-										source={require("./../../assets/images/path-19.png")}
-										style={styles.path19Image} />
-								</View>
-							</View>
-						</View>
-						<Text
-							style={styles.trackOrderText}>Track Order</Text>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightTwoImage} />
-					</View>
-					<View
-						style={{
-							flex: 1,
-						}} />
-					<View
-						style={styles.paymentOptionsView}>
-						<View
-							style={styles.iconPaymentView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-698.png")}
-									style={styles.path697Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/group-197.png")}
-									style={styles.group197Image} />
-							</View>
-						</View>
-						<Text
-							style={styles.cardsText}>Cards</Text>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightImage} />
-					</View>
-					<View
-						style={styles.logOutView}>
-						<View
-							style={styles.iconExitView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-698.png")}
-									style={styles.path698Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<View
-									style={styles.group200View}>
-									<View
-										pointerEvents="box-none"
-										style={{
-											position: "absolute",
-											left: 0,
-											right: 0,
-											top: 0,
-											bottom: 0,
-											justifyContent: "center",
-										}}>
-										<Image
-											source={require("./../../assets/images/group-199.png")}
-											style={styles.group199Image} />
-									</View>
-									<Image
-										source={require("./../../assets/images/path-26.png")}
-										style={styles.path26Image} />
-								</View>
-							</View>
-						</View>
-						<Text
-							style={styles.logOutText}>Log Out</Text>
-					</View>
-
-				</View>
-				<Icons />
-				<View style={{ backgroundColor: "pink" }} >
-					<View
-						pointerEvents="box-none"
-						style={{
-							height: 120,
-							marginRight: 68,
-							flexDirection: "row",
-							alignItems: "flex-start",
-						}}>
-						<Image
-							source={require("./../../assets/images/avatar.png")}
-							style={styles.avatarImage} />
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<View
-							pointerEvents="box-none"
-							style={{
-								width: 125,
-								height: 46,
-								marginTop: 41,
-								alignItems: "flex-end",
-							}}>
-							<Text
-								style={styles.solimanAhmedText}>Soliman Ahmed</Text>
-							<Text
-								style={styles.solimanGmailComText}>soliman@gmail.com</Text>
-						</View>
+						<Feather name="chevron-right" size={20} style={{ marginRight: 10 }} />
 					</View>
 					<View
 						style={styles.editProfileView}>
 						<View
 							style={styles.iconEditProfileView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-698.png")}
-									style={styles.path696Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<View
-									style={styles.group188View}>
-									<View
-										pointerEvents="box-none"
-										style={{
-											position: "absolute",
-											left: 0,
-											right: 0,
-											top: 0,
-											bottom: 0,
-											justifyContent: "center",
-										}}>
-										<Image
-											source={require("./../../assets/images/group-186.png")}
-											style={styles.group186Image} />
-									</View>
-									<Image
-										source={require("./../../assets/images/group-187.png")}
-										style={styles.group187Image} />
-								</View>
-							</View>
+							<Ic_iconlocation />
+
 						</View>
 						<Text
-							style={styles.editProfileText}>Edit Profile</Text>
+							style={styles.editProfileText}>Shipping Address</Text>
 						<View
 							style={{
 								flex: 1,
 							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightSixImage} />
+						<Feather name="chevron-right" size={20} style={{ marginRight: 10 }} />
 					</View>
 					<View
-						style={styles.shippingAddressView}>
+						style={styles.editProfileView}>
 						<View
-							style={styles.iconLocationView}>
-							<Image
-								source={require("./../../assets/images/group-185.png")}
-								style={styles.group185Image} />
+							style={styles.iconEditProfileView}>
+							<Ic_iconwishlistprofile />
 						</View>
 						<Text
-							style={styles.shippingAddressText}>Shipping Address</Text>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightFiveImage} />
-					</View>
-					<View
-						style={styles.wishlistView}>
-						<View
-							style={styles.iconWishlistView}>
-							<Image
-								source={require("./../../assets/images/group-189.png")}
-								style={styles.group189Image} />
-						</View>
-						<Text
-							style={styles.wishlistText}>Wishlist</Text>
+							style={styles.editProfileText}>Wishlist</Text>
 						<View
 							style={styles.iconNewView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-729.png")}
-									style={styles.path729Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Text
-									style={styles.newText}>New</Text>
-							</View>
+							<Text
+								style={styles.newText}>New</Text>
 						</View>
 						<View
 							style={{
 								flex: 1,
 							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightFourImage} />
+						<Feather name="chevron-right" size={20} style={{ marginRight: 10 }} />
 					</View>
-
 					<View
-						style={styles.orderHistoryView}>
+						style={styles.editProfileView}>
 						<View
-							style={styles.iconHistoryView}>
-							<View
-								style={styles.group194View}>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<Image
-										source={require("./../../assets/images/group-190.png")}
-										style={styles.group190Image} />
-								</View>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<View
-										style={styles.group193View}>
-										<View
-											pointerEvents="box-none"
-											style={{
-												position: "absolute",
-												left: 0,
-												right: 0,
-												top: 0,
-												bottom: 0,
-												justifyContent: "center",
-											}}>
-											<Image
-												source={require("./../../assets/images/group-191.png")}
-												style={styles.group191Image} />
-										</View>
-										<View
-											pointerEvents="box-none"
-											style={{
-												position: "absolute",
-												left: 0,
-												right: 0,
-												top: 0,
-												bottom: 0,
-												justifyContent: "center",
-											}}>
-											<Image
-												source={require("./../../assets/images/group-192.png")}
-												style={styles.group192Image} />
-										</View>
-									</View>
-								</View>
-							</View>
+							style={styles.iconEditProfileView}>
+							<Ic_iconhistory />
 						</View>
 						<Text
-							style={styles.orderHistoryText}>Order History</Text>
+							style={styles.editProfileText}>Order History</Text>
 						<View
 							style={{
 								flex: 1,
 							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightThreeImage} />
+						<Feather name="chevron-right" size={20} style={{ marginRight: 10 }} />
 					</View>
 					<View
-						style={styles.trackOrderView}>
+						style={styles.editProfileView}>
 						<View
-							style={styles.iconOrderView}>
-							<View
-								style={styles.group196View}>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<Image
-										source={require("./../../assets/images/group-195.png")}
-										style={styles.group195Image} />
-								</View>
-								<View
-									pointerEvents="box-none"
-									style={{
-										position: "absolute",
-										left: 0,
-										right: 0,
-										top: 0,
-										bottom: 0,
-										justifyContent: "center",
-									}}>
-									<Image
-										source={require("./../../assets/images/path-19.png")}
-										style={styles.path19Image} />
-								</View>
-							</View>
+							style={styles.iconEditProfileView}>
+							<Ic_iconorder />
 						</View>
 						<Text
-							style={styles.trackOrderText}>Track Order</Text>
+							style={styles.editProfileText}>Track Order</Text>
 						<View
 							style={{
 								flex: 1,
 							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightTwoImage} />
+						<Feather name="chevron-right" size={20} style={{ marginRight: 10 }} />
 					</View>
 					<View
-						style={{
-							flex: 1,
-						}} />
-					<View
-						style={styles.paymentOptionsView}>
+						style={styles.editProfileView}>
 						<View
-							style={styles.iconPaymentView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-698.png")}
-									style={styles.path697Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/group-197.png")}
-									style={styles.group197Image} />
-							</View>
+							style={styles.iconEditProfileView}>
+							<Ic_iconpayment />
 						</View>
 						<Text
-							style={styles.cardsText}>Cards</Text>
+							style={styles.editProfileText}>Cards</Text>
 						<View
 							style={{
 								flex: 1,
 							}} />
-						<Image
-							source={require("./../../assets/images/icon-arrow-right.png")}
-							style={styles.iconArrowRightImage} />
+						<Feather name="chevron-right" size={20} style={{ marginRight: 10 }} />
 					</View>
 					<View
-						style={styles.logOutView}>
+						style={styles.editProfileView}>
 						<View
-							style={styles.iconExitView}>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<Image
-									source={require("./../../assets/images/path-698.png")}
-									style={styles.path698Image} />
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<View
-									style={styles.group200View}>
-									<View
-										pointerEvents="box-none"
-										style={{
-											position: "absolute",
-											left: 0,
-											right: 0,
-											top: 0,
-											bottom: 0,
-											justifyContent: "center",
-										}}>
-										<Image
-											source={require("./../../assets/images/group-199.png")}
-											style={styles.group199Image} />
-									</View>
-									<Image
-										source={require("./../../assets/images/path-26.png")}
-										style={styles.path26Image} />
-								</View>
-							</View>
+							style={styles.iconEditProfileView}>
+							<Ic_iconexit />
 						</View>
 						<Text
-							style={styles.logOutText}>Log Out</Text>
+							style={styles.editProfileText}>Log Out</Text>
 					</View>
-
 				</View>
-				
 			</ScrollView>
-			{/* 
-			<View
-				pointerEvents="box-none"
-				style={{
-					position: "absolute",
-					left: 0,
-					right: 0,
-					top: 0,
-					bottom: 0,
-					justifyContent: "center",
-				}}>
-				<View
-					style={styles.contentView}>
-					<View
-						pointerEvents="box-none"
-						style={{
-							position: "absolute",
-							left: 0,
-							right: 0,
-							top: 0,
-							bottom: 0,
-							justifyContent: "center",
-						}}>
-					</View>
-					<View
-						pointerEvents="box-none"
-						style={{
-							position: "absolute",
-							left: 0,
-							right: 0,
-							top: 0,
-							bottom: 0,
-						}}></View>
-				</View>
-			</View>
-			<View
-				pointerEvents="box-none"
-				style={{
-					position: "absolute",
-					left: 0,
-					right: 0,
-					top: 0,
-					bottom: -6,
-				}}>
-				<View
-					pointerEvents="box-none"
-					style={{
-						height: 92,
-					}}>
-				</View>
-				<View
-					style={{
-						flex: 1,
-					}} />
-				<View
-					style={styles.group1698View}>
-					<View
-						pointerEvents="box-none"
-						style={{
-							position: "absolute",
-							left: 31,
-							right: 32,
-							top: 31,
-							bottom: 18,
-							flexDirection: "row",
-						}}>
-						<View
-							pointerEvents="box-none"
-							style={{
-								width: 29,
-								alignItems: "flex-start",
-							}}>
-							<Image
-								source={require("./../../assets/images/group-480.png")}
-								style={styles.group480Image} />
-							<View
-								style={{
-									flex: 1,
-								}} />
-							<Text
-								style={styles.homeText}>Home</Text>
-						</View>
-						<View
-							pointerEvents="box-none"
-							style={{
-								width: 27,
-								marginLeft: 47,
-								marginTop: 2,
-								alignItems: "flex-start",
-							}}>
-							<Image
-								source={require("./../../assets/images/noun-category-2834364.png")}
-								style={styles.nounCategory283436Image} />
-							<View
-								style={{
-									flex: 1,
-								}} />
-							<Text
-								style={styles.shopsText}>Shops</Text>
-						</View>
-						<View
-							style={{
-								flex: 1,
-							}} />
-						<Image
-							source={require("./../../assets/images/group-477-2.png")}
-							style={styles.group477Image} />
-						<View
-							pointerEvents="box-none"
-							style={{
-								width: 35,
-								marginRight: 40,
-								alignItems: "flex-end",
-							}}>
-							<Image
-								source={require("./../../assets/images/noun-cart-1363648.png")}
-								style={styles.nounCart1363648Image} />
-							<View
-								style={{
-									flex: 1,
-								}} />
-							<Text
-								style={styles.myCartText}>My Cart</Text>
-						</View>
-						<View
-							pointerEvents="box-none"
-							style={{
-								width: 23,
-								marginTop: 1,
-								alignItems: "flex-end",
-							}}>
-							<Image
-								source={require("./../../assets/images/group-479.png")}
-								style={styles.group479Image} />
-							<View
-								style={{
-									flex: 1,
-								}} />
-							<Text
-								style={styles.meText}>Me</Text>
-						</View>
-					</View>
-					<Text
-						style={styles.dealsText}>Deals</Text>
-				</View>
-			</View>
-		 */}
 		</View>
 	}
 }
@@ -996,7 +221,7 @@ const styles = StyleSheet.create({
 	},
 	wishlistText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1007,10 +232,13 @@ const styles = StyleSheet.create({
 		marginTop: 14,
 	},
 	iconNewView: {
-		backgroundColor: "transparent",
 		width: 49,
 		height: 24,
 		marginLeft: 21,
+		borderRadius: 5,
+		backgroundColor: "#eaac50",
+		alignContent: "center",
+		justifyContent: "center",
 	},
 	path729Image: {
 		resizeMode: "center",
@@ -1044,7 +272,7 @@ const styles = StyleSheet.create({
 	},
 	solimanAhmedText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1053,7 +281,7 @@ const styles = StyleSheet.create({
 	},
 	solimanGmailComText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 10,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1104,7 +332,7 @@ const styles = StyleSheet.create({
 	},
 	editProfileText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1146,7 +374,7 @@ const styles = StyleSheet.create({
 	shippingAddressText: {
 		backgroundColor: "transparent",
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1210,7 +438,7 @@ const styles = StyleSheet.create({
 	},
 	orderHistoryText: {
 		color: "rgb(49, 49, 49)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1263,7 +491,7 @@ const styles = StyleSheet.create({
 	},
 	trackOrderText: {
 		color: "rgb(19, 19, 19)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1308,7 +536,7 @@ const styles = StyleSheet.create({
 	},
 	cardsText: {
 		color: "rgb(1, 1, 1)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1365,7 +593,7 @@ const styles = StyleSheet.create({
 	},
 	logOutText: {
 		color: "black",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 18,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1392,7 +620,7 @@ const styles = StyleSheet.create({
 	},
 	myAccountText: {
 		color: "rgb(251, 251, 251)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 16,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1413,7 +641,7 @@ const styles = StyleSheet.create({
 	},
 	homeText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1429,7 +657,7 @@ const styles = StyleSheet.create({
 	},
 	shopsText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1454,7 +682,7 @@ const styles = StyleSheet.create({
 	},
 	myCartText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1469,7 +697,7 @@ const styles = StyleSheet.create({
 	},
 	meText: {
 		color: "rgb(171, 171, 171)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1479,7 +707,7 @@ const styles = StyleSheet.create({
 	},
 	dealsText: {
 		color: "rgb(234, 172, 80)",
-		fontFamily: "Poppins-ExtraLight",
+		fontFamily: "Poppins_200ExtraLight",
 		fontSize: 9,
 		fontStyle: "normal",
 		fontWeight: "normal",

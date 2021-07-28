@@ -159,6 +159,7 @@ export default function Main({ navigation }) {
             style={{
               textAlign: 'right',
               fontWeight: '300',
+              marginBottom:200,
               color: Colors.BLACK,
               fontSize: SIZES.FONT2,
               marginTop: SIZES.PADDING * 2,
